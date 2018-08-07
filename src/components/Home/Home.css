@@ -43,3 +43,65 @@
     font-size: 18px;
     padding: 15px 75px;
 }
+
+.desktop-skate-sale {
+    display: none;
+}
+
+
+@media (min-width: 1024px){
+    .mobile-skate-sale {
+        display: none;
+    }
+
+    .home-header {
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .desktop-skate-sale {
+        width: 45%;
+        height: 50%;
+        background-color: rgba(0, 0, 0, .7);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transition: all .3s ease;
+    }
+
+    .desktop-skate-sale:hover {
+        background-color: rgba(0, 0, 0, .9);
+    }
+
+    .desktop-skate-sale > h1 {
+        color: #eee;
+        font-size: 40px;
+    }
+
+    .desktop-skate-sale > p {
+        color: #eee;
+        width: 50%;
+        text-align: center;
+        line-height: 130%;
+        font-size: 20px;
+        margin-top: -5%;
+    }
+
+    .desktop-skate-sale > button {
+        border: none;
+        background-color: #1a1a1a;
+        color: #eee;
+        font-size: 18px;
+        padding: 15px 75px;
+        outline: none;
+        margin-top: -3%;
+    }
+
+    .desktop-skate-sale > button:hover {
+        cursor: pointer;
+    }
+}
