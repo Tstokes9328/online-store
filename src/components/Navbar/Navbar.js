@@ -40,8 +40,27 @@ class Navbar extends Component {
                     <FontAwesomeIcon icon="shopping-cart" />
                 </div>
 
+                {/* drop down menu || can only toggle in mobile display */}
                 <div className={this.state.dropDownOpen ? "drop-down-true" : "drop-down-false"}>
 
+                </div>
+
+                <div className="desktop-nav">
+                    <div className="desktop-logo">
+                        <h1>OneStop</h1>
+                    </div>
+                    <ul>
+                        <li>Home</li>
+                        <li>T-Shirts</li>
+                        <li>Shirts</li>
+                        <li>Jackets</li>
+                        <li>Pants</li>
+                        <li>Skate</li>
+                    </ul>
+                    <div className="desktop-nav-cart">
+                    <h1>Cart</h1>
+                    <FontAwesomeIcon icon="shopping-cart" />
+                    </div>
                 </div>
             </div>
         )
