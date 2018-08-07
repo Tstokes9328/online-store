@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 
+//Styling
+import './Home.css';
+
 class Home extends Component {
     render(){
         return (
-            <div>
-                Home
+            <div className="home-container">
+                
             </div>
         )
     }
