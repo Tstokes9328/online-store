@@ -5,6 +5,7 @@ const massive = require('massive');
 const session = require('express-session');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
+const controller = require('./controller');
 
 const app = express();
 app.use(bodyParser.json());
@@ -74,5 +75,10 @@ app.get('/auth/callback', passport.authenticate('auth0', {
     failureRedirect: FAILURE_REDIRECT
 }));
 
+
+//End Points
+
+//Get Featured Items
+app.get('/featured', controller.getFeatured);
 
 app.listen(3005, () => console.log('Connected on port 3005'));

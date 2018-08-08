@@ -4,3 +4,11 @@ create table if not exists users (
     name text
 );
 
+create table if not exists products (
+    id serial primary key,
+    name text,
+    style text,
+    price decimal,
+    image_link text,
+    color text
+);
