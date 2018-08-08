@@ -4,6 +4,9 @@ import axios from 'axios';
 //Styling
 import './Home.css';
 
+//Components
+import BannerOne from './Banners/Banner1';
+
 class Home extends Component {
     constructor(){
         super()
@@ -58,6 +61,9 @@ class Home extends Component {
                     {featured}
                     </div>
                 </div>
+
+                <BannerOne />
+
             </div>
         )
     }

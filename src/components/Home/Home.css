@@ -192,6 +192,11 @@
         width: 30%;
         height: 55vh;
     }
+
+    .product-container:hover {
+        box-shadow: 0 0 15px #ccc;
+        cursor: pointer;
+    }
     
     .product-container > img {
         width: 100%;
