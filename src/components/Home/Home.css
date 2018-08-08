@@ -56,10 +56,17 @@
     align-items: center;
 }
 
-.featured-items-container > h1 {
+.featured-title > h1 {
     text-transform: uppercase;
     font-size: 30px;
     margin-top: 10%;
+}
+
+.featured-products {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .product-container {
@@ -144,5 +151,61 @@
 
     .desktop-skate-sale > button:hover {
         cursor: pointer;
+    }
+
+    .featured-items-container {
+        height: 220vh;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .featured-title {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 5%;
+    }
+    
+    .featured-title > h1 {
+        font-size: 35px;
+        margin-top: 0;
+    }
+    
+    .featured-products {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        height: 200vh;
+    }
+    
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 30%;
+        height: 55vh;
+    }
+    
+    .product-container > img {
+        width: 100%;
+    }
+    
+    .product-container > h1 {
+        font-size: 25px;
+    }
+    
+    .product-container > hr {
+        width: 40%;
+    }
+    
+    .product-container > h2 {
+        font-size: 22px;
     }
 }

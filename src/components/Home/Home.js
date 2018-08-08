@@ -51,8 +51,12 @@ class Home extends Component {
                     <button>shop collection</button>
                 </div>
                 <div className="featured-items-container">
-                    <h1>Featured Products</h1>
+                    <div className="featured-title">
+                        <h1>Featured Products</h1>
+                    </div>
+                    <div className="featured-products">
                     {featured}
+                    </div>
                 </div>
             </div>
         )
