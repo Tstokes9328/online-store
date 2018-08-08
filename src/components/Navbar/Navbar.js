@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import {NavLink} from 'react-router-dom'; 
+
 //Styling
 import './Navbar.css';
 
@@ -46,16 +48,55 @@ class Navbar extends Component {
                 </div>
 
                 <div className="desktop-nav">
-                    <div className="desktop-logo">
-                        <h1>OneStop</h1>
-                    </div>
                     <ul>
-                        <li>Home</li>
-                        <li>T-Shirts</li>
-                        <li>Shirts</li>
-                        <li>Jackets</li>
-                        <li>Pants</li>
-                        <li>Skate</li>
+                        <li><NavLink 
+                        exact to="/"
+                        activeStyle={{
+                            background: '#1a1a1a',
+                            color: '#eee'
+                            }}
+                        >Home</NavLink></li>
+
+                        <li><NavLink 
+                        to="/t-shirts"
+                        activeStyle={{
+                            background: '#1a1a1a',
+                            color: '#eee'
+                            }}
+                        >T-Shirts</NavLink></li>
+
+                        <li><NavLink 
+                        to="/shirts"
+                        activeStyle={{
+                            background: '#1a1a1a',
+                            color: '#eee'
+                            }}
+                        >Shirts</NavLink></li>
+
+                        <li><NavLink 
+                        to="/jackets"
+                        activeStyle={{
+                            background: '#1a1a1a',
+                            color: '#eee'
+                            }}
+                        >Jackets</NavLink></li>
+
+                        <li><NavLink 
+                        to="/pants"
+                        activeStyle={{
+                            background: '#1a1a1a',
+                            color: '#eee'
+                            }}
+                        >Pants</NavLink></li>
+
+                        <li><NavLink 
+                        to="/skate"
+                        activeStyle={{
+                            background: '#1a1a1a',
+                            color: '#eee'
+                            }}
+                        >Skate</NavLink></li>
+
                     </ul>
                     <div className="desktop-nav-cart">
                     <h1>Cart</h1>
