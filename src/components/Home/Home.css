@@ -119,10 +119,11 @@
         justify-content: space-around;
         align-items: center;
         transition: all .3s ease;
+        border: 2px solid #eee;
     }
 
     .desktop-skate-sale:hover {
-        background-color: rgba(0, 0, 0, .9);
+        background-color: rgba(0, 0, 0, .8);
     }
 
     .desktop-skate-sale > h1 {
@@ -147,6 +148,7 @@
         padding: 15px 75px;
         outline: none;
         margin-top: -3%;
+        border: 2px solid #eee;
     }
 
     .desktop-skate-sale > button:hover {
