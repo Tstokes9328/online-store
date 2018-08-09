@@ -3,5 +3,11 @@ module.exports = {
         req.app.get('db').get_featured_products().then(response => {
             res.status(200).send(response)
         })
+    },
+
+    getBestSellers: (req, res) => {
+        req.app.get('db').get_best_sellers().then(response => {
+            res.status(200).send(response)
+        })
     }
 }

@@ -81,4 +81,7 @@ app.get('/auth/callback', passport.authenticate('auth0', {
 //Get Featured Items
 app.get('/featured', controller.getFeatured);
 
+//Get Best Sellers
+app.get('/bestsellers', controller.getBestSellers);
+
 app.listen(3005, () => console.log('Connected on port 3005'));

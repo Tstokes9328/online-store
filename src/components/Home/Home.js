@@ -13,15 +13,24 @@ class Home extends Component {
         super()
 
         this.state = {
-            featuredItems: []
+            featuredItems: [],
+            bestSellers: []
         }
     }
 
     //fills featuredItems array with featured items
     componentDidMount(){
+        //Gets featured images
         axios.get('/featured').then(response => {
             this.setState({
                 featuredItems: response.data
+            })
+        });
+
+        //Gets best sellers
+        axios.get('/bestsellers').then(response => {
+            this.setState({
+                bestSellers: response.data
             })
         })
     }
@@ -32,6 +41,18 @@ class Home extends Component {
         const featured = this.state.featuredItems.map((item, index) => {
             return (
                 <div key={index} className="product-container">
+                    <img src={item.image_link} />
+                    <h1>{item.name}</h1>
+                    <hr />
+                    <h2>${item.price}</h2>
+                </div>
+            )
+        })
+
+        //map through best seller items
+        const bestSeller = this.state.bestSellers.map((item, index) => {
+            return (
+                <div key={index} className="best-seller-product">
                     <img src={item.image_link} />
                     <h1>{item.name}</h1>
                     <hr />
@@ -64,8 +85,18 @@ class Home extends Component {
                 </div>
 
                 <BannerOne />
-                <Footer />
 
+                <div className="best-sellers-container">
+                    <div className="best-sellers-title">
+                        <h1>Best Sellers</h1>
+                    </div>
+
+                    <div className="best-sellers-items">
+                        {bestSeller}
+                    </div>
+                </div>
+
+                <Footer />
             </div>
         )
     }
