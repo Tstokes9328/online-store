@@ -7,6 +7,7 @@ import './Home.css';
 //Components
 import BannerOne from './Banners/Banner1';
 import Footer from '../Footer/Footer';
+import Motorcycle from './Motorcyle/Motorcycle';
 
 class Home extends Component {
     constructor(){
@@ -95,6 +96,8 @@ class Home extends Component {
                         {bestSeller}
                     </div>
                 </div>
+
+                <Motorcycle />
 
                 <Footer />
             </div>

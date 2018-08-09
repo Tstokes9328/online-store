@@ -1,0 +1,93 @@
+.motorcycle-container {
+    width: 100%;
+    height: 80vh;
+}
+
+.motorcycle-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/motorcycle.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.motorcycle-image-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.motorcycle-ad {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0,0,0, .6);
+    border: 2px solid #eee;
+}
+
+.motorcycle-ad > h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #eee;
+    margin-top: 10%;
+}
+
+.motorcycle-ad > p {
+    font-size: 18px;
+    width: 80%;
+    line-height: 130%;
+    color: #eee;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.motorcycle-ad > button {
+    background: #1a1a1a;
+    color: #eee;
+    font-size: 25px;
+    padding: 10px 75px;
+    outline: none;
+    margin-top: 10%;
+}
+
+@media (min-width: 1024px){
+    .motorcycle-ad {
+        width: 40%;
+        height: 50%;
+        transition: all .3s ease;
+    }
+
+    .motorcycle-ad:hover {
+        background: rgba(0,0,0, .7);
+    }
+    
+    .motorcycle-ad > h1 {
+        font-size: 45px;
+        text-transform: uppercase;
+        color: #eee;
+        margin-top: 8%;
+    }
+    
+    .motorcycle-ad > p {
+        font-size: 22px;
+        width: 80%;
+        line-height: 140%;
+        margin-top: 3%;
+    }
+    
+    .motorcycle-ad > button {
+        padding: 15px 75px;
+        margin-top: 8%;
+        border: 2px solid #eee;
+    }
+
+    .motorcycle-ad > button:hover {
+        cursor: pointer;
+    }
+}

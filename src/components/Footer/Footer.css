@@ -121,7 +121,8 @@
     
     .links-container {
         height: 10vh;
-        border-top: 2px solid #1a1a1a;
+        border-top: 1px solid #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
     }
     
     .links-container > ul {
@@ -171,5 +172,6 @@
 
     .icons-container {
         width: 40%;
+        font-size: 30px;
     }
 }
