@@ -58,7 +58,7 @@ class Navbar extends Component {
                         >Home</NavLink></li>
 
                         <li><NavLink 
-                        to="/t-shirts"
+                        to="/tees"
                         activeStyle={{
                             background: '#1a1a1a',
                             color: '#eee'

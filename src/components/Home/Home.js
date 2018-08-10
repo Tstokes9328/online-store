@@ -98,8 +98,6 @@ class Home extends Component {
                 </div>
 
                 <Motorcycle />
-
-                <Footer />
             </div>
         )
     }

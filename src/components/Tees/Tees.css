@@ -1,0 +1,82 @@
+.tees-container {
+    width: 100%;
+    margin-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tees-header {
+    width: 100%;
+    height: 50vh;
+    background: url('../../assets/shirt-header.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.tees-products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tees-product {
+    width: 100%;
+}
+
+.tees-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 60vh;
+    margin: 0 auto;
+}
+
+.tees-item-container > img {
+    width: 100%;
+}
+
+.tees-item-container > h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.tees-item-container > hr {
+    width: 30%;
+    height: 1px;
+    background: #1a1a1a;
+}
+
+.tees-item-container > h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+@media (min-width: 1024px){
+    .tees-title {
+        margin-top: 1%;
+        font-size: 25px;
+    }
+
+    .tees-product-inv {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        flex-wrap: wrap;
+    }
+    
+    .tees-item-container {
+        width: 30%;
+        height: 50vh;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .tees-item-container:hover {
+        box-shadow: 0 0 10px #ccc;
+        cursor: pointer;
+    }
+}

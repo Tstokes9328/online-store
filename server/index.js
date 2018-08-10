@@ -84,4 +84,7 @@ app.get('/featured', controller.getFeatured);
 //Get Best Sellers
 app.get('/bestsellers', controller.getBestSellers);
 
+//Get all tees
+app.get('/tees', controller.getAllTees);
+
 app.listen(3005, () => console.log('Connected on port 3005'));

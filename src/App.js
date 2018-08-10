@@ -8,6 +8,7 @@ import Routes from './routes';
 
 //Components
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 //Font Awesome
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -24,6 +25,7 @@ class App extends Component {
       <div className="app-container">
         <Navbar />
         {Routes}
+        <Footer />
       </div>
     );
   }
