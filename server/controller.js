@@ -15,5 +15,11 @@ module.exports = {
         req.app.get('db').get_tees().then(response => {
             res.status(200).send(response)
         })
+    },
+
+    getAllShirts: (req, res) => {
+        req.app.get('db').get_shirts().then(response => {
+            res.status(200).send(response)
+        })
     }
 }

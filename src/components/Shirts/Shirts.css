@@ -1,0 +1,90 @@
+.shirts-container {
+    width: 100%;
+    margin-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.shirts-header {
+    width: 100%;
+    height: 50vh;
+    background: url('../../assets/shirts-header.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.shirts-catalague {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shirts-catalague-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.shirt-container {
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shirt-container > img {
+    width: 100%;
+}
+
+.shirt-container > h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.shirt-container > hr {
+    width: 30%;
+    background: #1a1a1a;
+    height: 1px;
+}
+
+.shirt-container > h2 {
+    font-size: 22px;
+    margin: 0;
+}
+
+@media (min-width: 1024px){
+    .shirts-title {
+        margin-top: 3%;
+        font-size: 25px;
+    }
+
+    .shirts-catalague-display {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    
+    .shirt-container {
+        width: 30%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .shirt-container:hover {
+        box-shadow: 0 0 10px #ccc;
+        cursor: pointer;
+    }
+}

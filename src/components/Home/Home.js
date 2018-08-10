@@ -6,7 +6,6 @@ import './Home.css';
 
 //Components
 import BannerOne from './Banners/Banner1';
-import Footer from '../Footer/Footer';
 import Motorcycle from './Motorcyle/Motorcycle';
 
 class Home extends Component {

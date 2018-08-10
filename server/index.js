@@ -87,4 +87,7 @@ app.get('/bestsellers', controller.getBestSellers);
 //Get all tees
 app.get('/tees', controller.getAllTees);
 
+//Get all shirts (button up and flannels)
+app.get('/shirts', controller.getAllShirts);
+
 app.listen(3005, () => console.log('Connected on port 3005'));
