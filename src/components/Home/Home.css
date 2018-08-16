@@ -244,7 +244,7 @@
     }
 
     .product-container:hover {
-        opacity: .9;
+        transform: scale(1.1);
         cursor: pointer;
     }
     
@@ -307,7 +307,7 @@
     }
 
     .best-seller-product:hover {
-        opacity: .9;
+        transform: scale(1.1);
         cursor: pointer;
     }
     

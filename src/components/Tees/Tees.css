@@ -73,11 +73,12 @@
         height: 50vh;
         margin-top: 2%;
         margin-bottom: 2%;
+        outline: 1px solid  transparent;
         transition: all .2s ease;
     }
 
     .tees-item-container:hover {
-        opacity: .9;
+        transform: scale(1.1);
         cursor: pointer;
     }
 }
