@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Tees from './components/Tees/Tees';
 import Shirts from './components/Shirts/Shirts';
 import Jackets from './components/Jackets/Jackets';
+import Pants from './components/Pants/Pants';
 
 //Routing
 export default (
@@ -14,5 +15,6 @@ export default (
         <Route  path="/tees" component={Tees}/>
         <Route  path="/shirts" component={Shirts}/>
         <Route  path="/jackets" component={Jackets}/>
+        <Route  path="/pants" component={Pants}/>
     </Switch>
 )

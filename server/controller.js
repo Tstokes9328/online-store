@@ -27,5 +27,11 @@ module.exports = {
         req.app.get('db').get_jackets().then(response => {
             res.status(200).send(response);
         })
+    },
+
+    getAllPants: (req, res) => {
+        req.app.get('db').get_pants().then(response => {
+            res.status(200).send(response)
+        })
     }
 }
