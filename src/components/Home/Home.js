@@ -32,7 +32,7 @@ class Home extends Component {
             this.setState({
                 bestSellers: response.data
             })
-        })
+        });
     }
 
     render(){

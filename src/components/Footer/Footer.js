@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 //Styles
 import './Footer.css';
@@ -27,11 +28,11 @@ class Footer extends Component {
                         <button>sign up</button>
                     </div>
                     <div className="icons-container">
-                        <FontAwesomeIcon icon={['fab', 'facebook']} />
-                        <FontAwesomeIcon icon={['fab', 'twitter']} />
-                        <FontAwesomeIcon icon={['fab', 'instagram']} />
-                        <FontAwesomeIcon icon={['fab', 'youtube']} />
-                        <FontAwesomeIcon icon={['fab', 'tumblr']} />
+                        <Link to="#"><FontAwesomeIcon icon={['fab', 'facebook']} /></Link>
+                        <Link to="#"><FontAwesomeIcon icon={['fab', 'twitter']} /></Link>
+                        <Link to="#"><FontAwesomeIcon icon={['fab', 'instagram']} /></Link>
+                        <Link to="#"><FontAwesomeIcon icon={['fab', 'youtube']} /></Link>
+                        <Link to="#"><FontAwesomeIcon icon={['fab', 'tumblr']} /></Link>
                     </div>
                 </div>
                 <div className="footer">
