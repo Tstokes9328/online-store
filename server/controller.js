@@ -33,5 +33,12 @@ module.exports = {
         req.app.get('db').get_pants().then(response => {
             res.status(200).send(response)
         })
+    },
+
+    getProductInfo: (req, res) => {
+        let {id} = req.params;
+        req.app.get('db').get_product_info(id).then(response => {
+            res.status(200).send(response)
+        })
     }
 }

@@ -3,4 +3,5 @@
 
 .app-container {
     font-family: 'Raleway', sans-serif;
+    overflow: hidden;
 }
