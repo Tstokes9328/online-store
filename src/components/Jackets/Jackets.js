@@ -20,6 +20,9 @@ class Jackets extends Component {
                 jackets: response.data
             })
         })
+
+        //component will render at the top of the window
+        window.scrollTo(0,0,);
     };
 
     render(){

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {NavLink} from 'react-router-dom'; 
+import {NavLink, Link} from 'react-router-dom'; 
 
 //Styling
 import './Navbar.css';
@@ -44,7 +44,12 @@ class Navbar extends Component {
 
                 {/* drop down menu || can only toggle in mobile display */}
                 <div className={this.state.dropDownOpen ? "drop-down-true" : "drop-down-false"}>
-
+                    <Link to="/" onClick={this.toggleDropDown}>Home</Link>
+                    <Link to="/tees" onClick={this.toggleDropDown}>Tees</Link>
+                    <Link to="/shirts" onClick={this.toggleDropDown}>Shirts</Link>
+                    <Link to="/jackets" onClick={this.toggleDropDown}>Jackets</Link>
+                    <Link to="/pants" onClick={this.toggleDropDown}>Pants</Link>
+                    <Link to="/skate" onClick={this.toggleDropDown}>Skate</Link>
                 </div>
 
                 <div className="desktop-nav">

@@ -33,6 +33,9 @@ class Home extends Component {
                 bestSellers: response.data
             })
         });
+
+        //component will render at the top of the window
+        window.scrollTo(0,0,);
     }
 
     render(){

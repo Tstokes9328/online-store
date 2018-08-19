@@ -19,6 +19,9 @@ class Tees extends Component {
                 tees: response.data
             })
         })
+
+        //component will render at the top of the window
+        window.scrollTo(0,0,);
     }
 
     render(){

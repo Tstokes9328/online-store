@@ -77,6 +77,16 @@
     top: 12vh;
     transition: all ease-in;
     animation: slideIn .2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.drop-down-true > a {
+    font-size: 22px;
+    text-decoration: none;
+    color: #eee;
 }
 
 .drop-down-false {
@@ -86,6 +96,10 @@
     background: #1a1a1a;
     top: 12vh;
     animation: slideOut .2s;
+}
+
+.drop-down-false > a {
+    display: none;
 }
 
 .desktop-nav {
