@@ -12,6 +12,10 @@ class ProductInfo extends Component {
             productInfo: [],
             quantity: 1
         }
+
+        //Binding methods
+        this.increaseCount = this.increaseCount.bind(this);
+        this.decreaseCount = this.decreaseCount.bind(this);
     }
 
     componentDidMount(){
@@ -24,7 +28,24 @@ class ProductInfo extends Component {
                 productInfo: response.data
             })
         });
-    }
+    };
+
+    //Methods
+        //increase quantity
+        increaseCount(){
+            this.setState({
+                quantity: this.state.quantity + 1
+            })
+        };
+
+        //decrease quantity
+        decreaseCount(){
+            if(this.state.quantity > 1){
+                this.setState({
+                    quantity: this.state.quantity - 1
+                })
+            }
+        }
 
     render(){
 
@@ -64,9 +85,9 @@ class ProductInfo extends Component {
                         <div className="product-options">
                             <div className="product-quant">
                                 <h1>Quantity:</h1>
-                                <div className="minus">&minus;</div>
+                                <div className="minus" onClick={this.decreaseCount}>&minus;</div>
                                 <input type="number" value={this.state.quantity}/>
-                                <div className="add">&#43;</div>
+                                <div className="add" onClick={this.increaseCount}>&#43;</div>
                             </div>
                             <button>add to cart</button>
                         </div>

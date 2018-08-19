@@ -50,6 +50,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: .5%;
+    border-top: 1px solid #1a1a1a;
 }
 
 .subscription-container > h1 {
@@ -164,6 +166,7 @@
     
     .subscription-container {
         height: 45vh;
+        margin-top: 0;
     }
     
     .subscription-container > h1 {
