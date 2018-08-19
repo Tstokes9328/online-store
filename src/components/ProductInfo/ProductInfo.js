@@ -28,14 +28,19 @@ class ProductInfo extends Component {
                 productInfo: response.data
             })
         });
+
+        //loads at top of the window
+        window.scrollTo(0,0,);
     };
 
     //Methods
         //increase quantity
         increaseCount(){
-            this.setState({
-                quantity: this.state.quantity + 1
-            })
+            if(this.state.quantity < 10){
+                this.setState({
+                    quantity: this.state.quantity + 1
+                })
+            }
         };
 
         //decrease quantity
