@@ -37,7 +37,7 @@
     align-items: center;
 }
 
-.pant-container > img {
+.pant-container > a > img {
     width: 100%;
 }
 
@@ -81,10 +81,15 @@
         align-items: center;
         margin-top: 2%;
         margin-bottom: 2%;
-        transition: all .2s ease;
     }
 
-    .pant-container:hover {
+    .pant-container > a > img {
+        width: 100%;
+        transition: all .2s ease;
+        margin-bottom: 3%;
+    }
+
+    .pant-container > a > img:hover {
         transform: scale(1.1);
         cursor: pointer;
     }

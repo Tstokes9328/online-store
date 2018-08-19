@@ -35,7 +35,7 @@
     margin: 0 auto;
 }
 
-.tees-item-container > img {
+.tees-item-container > a > img {
     width: 100%;
 }
 
@@ -74,10 +74,15 @@
         margin-top: 2%;
         margin-bottom: 2%;
         outline: 1px solid  transparent;
-        transition: all .2s ease;
     }
 
-    .tees-item-container:hover {
+    .tees-item-container > a > img {
+        width: 100%;
+        transition: all .2s ease;
+        margin-bottom: 3%;
+    }
+
+    .tees-item-container > a > img:hover {
         transform: scale(1.1);
         cursor: pointer;
     }

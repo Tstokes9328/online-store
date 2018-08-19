@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 //Styling
 import './Home.css';
@@ -44,7 +45,7 @@ class Home extends Component {
         const featured = this.state.featuredItems.map((item, index) => {
             return (
                 <div key={index} className="product-container">
-                    <img src={item.image_link} />
+                    <Link to={`/products/${item.id}`}><img src={item.image_link}/></Link>
                     <h1>{item.name}</h1>
                     <hr />
                     <h2>${item.price}</h2>
@@ -56,7 +57,7 @@ class Home extends Component {
         const bestSeller = this.state.bestSellers.map((item, index) => {
             return (
                 <div key={index} className="best-seller-product">
-                    <img src={item.image_link} />
+                    <Link to={`/products/${item.id}`}><img src={item.image_link} /></Link>
                     <h1>{item.name}</h1>
                     <hr />
                     <h2>${item.price}</h2>

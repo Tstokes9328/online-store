@@ -68,7 +68,7 @@ class Navbar extends Component {
                             background: '#1a1a1a',
                             color: '#eee'
                             }}
-                        >T-Shirts</NavLink></li>
+                        >Tees</NavLink></li>
 
                         <li><NavLink 
                         to="/shirts"

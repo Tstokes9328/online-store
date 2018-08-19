@@ -8,6 +8,7 @@ import Tees from './components/Tees/Tees';
 import Shirts from './components/Shirts/Shirts';
 import Jackets from './components/Jackets/Jackets';
 import Pants from './components/Pants/Pants';
+import ProductInfo from './components/ProductInfo/ProductInfo';
 
 //Routing
 export default (
@@ -17,6 +18,7 @@ export default (
         <Route  path="/shirts" component={Shirts}/>
         <Route  path="/jackets" component={Jackets}/>
         <Route  path="/pants" component={Pants}/>
+        <Route path="/products/:id" component={ProductInfo}/>
         <Route component={Error404}/>
     </Switch>
 )

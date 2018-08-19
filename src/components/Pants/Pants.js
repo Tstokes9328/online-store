@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 //Styling
 import './Pants.css';
@@ -30,7 +31,7 @@ class Pants extends Component {
         let pants = this.state.pants.map((item, index) => {
             return (
                 <div className="pant-container" ley={index}>
-                    <img src={item.image_link} />
+                    <Link to={`/products/${item.id}`}><img src={item.image_link} /></Link>
                     <h1>{item.name}</h1>
                     <hr />
                     <h2>{item.price}</h2>

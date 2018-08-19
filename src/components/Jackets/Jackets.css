@@ -37,7 +37,7 @@
     align-items: center;
 }
 
-.jacket-container > img {
+.jacket-container > a > img {
     width: 100%;
 }
 
@@ -75,16 +75,21 @@
     
     .jacket-container {
         width: 30%;
-        height: 50vh;
+        height: 55vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 2%;
         margin-bottom: 2%;
+    }
+
+    .jacket-container > a > img {
+        width: 100%;
+        margin-bottom: 3%;
         transition: all .2s ease;
     }
 
-    .jacket-container:hover {
+    .jacket-container > a > img:hover {
         transform: scale(1.1);
         cursor: pointer;
     }
