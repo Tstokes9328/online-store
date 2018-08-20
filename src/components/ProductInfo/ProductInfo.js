@@ -10,12 +10,15 @@ class ProductInfo extends Component {
         
         this.state = {
             productInfo: [],
-            quantity: 1
+            quantity: 1,
+            modal: false
         }
 
         //Binding methods
         this.increaseCount = this.increaseCount.bind(this);
         this.decreaseCount = this.decreaseCount.bind(this);
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
 
     componentDidMount(){
@@ -52,6 +55,20 @@ class ProductInfo extends Component {
             }
         }
 
+        //open modal
+        openModal(){
+            this.setState({
+                modal: true
+            })
+        };
+
+        //close modal
+        closeModal(){
+            this.setState({
+                modal: false
+            })
+        };
+
     render(){
 
         //map through the productInfo in state to display product name & style
@@ -69,7 +86,19 @@ class ProductInfo extends Component {
         let productImage = this.state.productInfo.map((item, index) => {
             return (
                 <div className="product-image-container">
-                    <img src={item.image_link} alt="product display"/>
+                    <img src={item.image_link} alt="product display" onClick={this.openModal}/>
+                </div>
+            )
+        })
+
+        //map through productInfo to display the product image in a modal
+        let modal = this.state.productInfo.map((item, index) => {
+            return (
+                <div className={this.state.modal ? "product-modal-container" : "modal-false"}>
+                    <div className="product-modal">
+                        <img src={item.image_link} alt="product modal"/>
+                        <div className="modal-exit" onClick={this.closeModal}>&times;</div>
+                    </div>
                 </div>
             )
         })
@@ -108,6 +137,9 @@ class ProductInfo extends Component {
                     {productImage}
                     {productDetails}
                 </div>
+
+                {/* Modal */}
+                {modal}
             </div>
         )
     }
