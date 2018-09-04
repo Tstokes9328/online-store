@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
 //Styling
 import './ProductInfo.css';
 
 class ProductInfo extends Component {
-    constructor(){
+    constructor() {
         super()
-        
+
         this.state = {
             productInfo: [],
             quantity: 1,
@@ -21,7 +21,7 @@ class ProductInfo extends Component {
         this.closeModal = this.closeModal.bind(this);
     }
 
-    componentDidMount(){
+    componentDidMount() {
         //destructure product id from params
         let id = this.props.match.params.id;
 
@@ -33,43 +33,43 @@ class ProductInfo extends Component {
         });
 
         //loads at top of the window
-        window.scrollTo(0,0,);
+        window.scrollTo(0, 0);
     };
 
     //Methods
-        //increase quantity
-        increaseCount(){
-            if(this.state.quantity < 10){
-                this.setState({
-                    quantity: this.state.quantity + 1
-                })
-            }
-        };
-
-        //decrease quantity
-        decreaseCount(){
-            if(this.state.quantity > 1){
-                this.setState({
-                    quantity: this.state.quantity - 1
-                })
-            }
+    //increase quantity
+    increaseCount() {
+        if (this.state.quantity < 10) {
+            this.setState({
+                quantity: this.state.quantity + 1
+            })
         }
+    };
 
-        //open modal
-        openModal(){
+    //decrease quantity
+    decreaseCount() {
+        if (this.state.quantity > 1) {
             this.setState({
-                modal: true
+                quantity: this.state.quantity - 1
             })
-        };
+        }
+    }
 
-        //close modal
-        closeModal(){
-            this.setState({
-                modal: false
-            })
-        };
+    //open modal
+    openModal() {
+        this.setState({
+            modal: true
+        })
+    };
 
-    render(){
+    //close modal
+    closeModal() {
+        this.setState({
+            modal: false
+        })
+    };
+
+    render() {
 
         //map through the productInfo in state to display product name & style
         let productTitle = this.state.productInfo.map((item, index) => {
@@ -78,7 +78,7 @@ class ProductInfo extends Component {
                     <h1>{item.name}</h1>
                     <hr />
                     <h2>{item.style}</h2>
-                </div> 
+                </div>
             )
         });
 
@@ -86,7 +86,7 @@ class ProductInfo extends Component {
         let productImage = this.state.productInfo.map((item, index) => {
             return (
                 <div className="product-image-container">
-                    <img src={item.image_link} alt="product display" onClick={this.openModal}/>
+                    <img src={item.image_link} alt="product display" onClick={this.openModal} />
                 </div>
             )
         })
@@ -96,7 +96,7 @@ class ProductInfo extends Component {
             return (
                 <div className={this.state.modal ? "product-modal-container" : "modal-false"}>
                     <div className="product-modal">
-                        <img src={item.image_link} alt="product modal"/>
+                        <img src={item.image_link} alt="product modal" />
                         <div className="modal-exit" onClick={this.closeModal}>&times;</div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@ class ProductInfo extends Component {
                             <div className="product-quant">
                                 <h1>Quantity:</h1>
                                 <div className="minus" onClick={this.decreaseCount}>&minus;</div>
-                                <input type="number" value={this.state.quantity}/>
+                                <input type="number" value={this.state.quantity} />
                                 <div className="add" onClick={this.increaseCount}>&#43;</div>
                             </div>
                             <button>add to cart</button>

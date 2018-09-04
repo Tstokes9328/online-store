@@ -63,7 +63,6 @@ passport.serializeUser((id, done) => {
 });
 passport.deserializeUser((id, done) => {
     app.get('db').find_session_user([id]).then(user => {
-
         done(null, user[0]);
     })
 });
@@ -77,6 +76,9 @@ app.get('/auth/callback', passport.authenticate('auth0', {
 
 
 //End Points
+
+//User End Point
+app.get('/auth/user', controller.getUser);
 
 //Get Featured Items
 app.get('/featured', controller.getFeatured);

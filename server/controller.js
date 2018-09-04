@@ -36,9 +36,18 @@ module.exports = {
     },
 
     getProductInfo: (req, res) => {
-        let {id} = req.params;
+        let { id } = req.params;
         req.app.get('db').get_product_info(id).then(response => {
             res.status(200).send(response)
         })
+    },
+
+    getUser: (req, res) => {
+        console.log('req obj:', req.user);
+        if(req.user){
+            res.status(200).send(req.user)
+        } else {
+            res.status(401).send('Nope, not you..')
+        }
     }
 }
